@@ -21,3 +21,7 @@ Database
 訂購紀錄
 
 訂單ID,訂單日期,店家,商品,數量,單價,總額,取餐地點,會員ID(FK)
+
+mapping image
+
+<img src="http://bb3en.github.io/app_order/ts.svg">
