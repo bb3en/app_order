@@ -10,9 +10,21 @@
 
 <script src="plugin/jquery-1.11.3.min.js"></script>
 <script src="plugin/jquery.mobile-1.4.5.min.js"></script>
+<script src="shake.js"></script>
+<script type="text/javascript" src="plugin/jquery.qrcode.min.js"></script>
 
-
-
+<script>
+jQuery(function(){
+jQuery('#qrcode1').qrcode({width: 100,height: 100,text: "http://theme.npm.edu.tw/exh104/guizhou/ch/ch00.html"});
+jQuery('#qrcode2').qrcode({width: 100,height: 100,text: "http://www.npm.gov.tw/exh100/npm_anime/"});
+jQuery('#qrcode3').qrcode({width: 100,height: 100,text: "http://www.npm.gov.tw/zh-TW/disclaimer.aspx?sNo=04006190"});
+jQuery('#qrcode4').qrcode({width: 100,height: 100,text: "http://theme.npm.edu.tw/exh104/womanspainting/ch/ch00.html"});
+jQuery('#qrcode11').qrcode({width: 100,height: 100,text: "http://theme.npm.edu.tw/exh104/guizhou/ch/ch00.html"});
+jQuery('#qrcode22').qrcode({width: 100,height: 100,text: "http://www.npm.gov.tw/exh100/npm_anime/"});
+jQuery('#qrcode33').qrcode({width: 100,height: 100,text: "http://www.npm.gov.tw/zh-TW/disclaimer.aspx?sNo=04006190"});
+jQuery('#qrcode44').qrcode({width: 100,height: 100,text: "http://theme.npm.edu.tw/exh104/womanspainting/ch/ch00.html"});
+})
+</script>
 <script>
 
 
@@ -30,9 +42,21 @@ function clickCounter() {
 }
 
 $(document).ready(function () {
+var d = new Date();
 localStorage.whataboutnow = "會員登錄";
+document.getElementById("nowtime").innerHTML =  "目前時間  ： " + d;
 document.getElementById("result").innerHTML =  localStorage.whataboutnow;
+
+
 });
+</script>
+
+<script type ="text/javascript">
+ //宣告一個日期的變數，並取得現在日期。
+ var d = new Date();
+ //將現在日期顯示在頁面上
+ document.write("目前時間為："+d);
+ 
 </script>
 
 </head>
@@ -65,13 +89,10 @@ document.getElementById("result").innerHTML =  localStorage.whataboutnow;
 </div>
 	  
   <div data-role="header" class="tophaed">
-    <h1>國立故宮博物館-首頁</h1>
+    <h1>KUAS燕巢訂餐系統-首頁</h1>
 
 	    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left" data-transition="pop">Home</a>
          <a href="#login" id="result" data-rel="popup" data-position-to="window" data-transition="fade" >會員登錄</a>
-		 <a href="#page_1" class="ui-btn ui-corner-all ui-shadow " data-transition="pop">當期展覽</a>
-		 <a href="#page_2" class="ui-btn ui-corner-all ui-shadow " data-transition="pop">展覽介紹</a>
-		 <a href="#page_3" class="ui-btn ui-corner-all ui-shadow " data-transition="pop">導覽功能</a>
 
   </div>
 
@@ -82,389 +103,26 @@ document.getElementById("result").innerHTML =  localStorage.whataboutnow;
 
 <a >最新消息</a>
 <p></p>
-	 <table summary="" width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tbody><tr>
-            <th id="newsLayer" style="background-color: #8a2b25;">
-             <h3>   單元名稱<!--單元名稱--> </h3>
-            </th>
-            <th id="newsDate" style="background-color: #8a2b25;">
-              <h3>   發布日期 <!--發布日期-->  </h3>
-            </th>
-            <th id="newsTitle" style="background-color: #8a2b25;">
-              <h3>    標題  </h3>
-            </th>
-        </tr>
-        
-            
-                <tr class="lineStyle1">
-                    <td headers="newsLayer">
-                        新聞專區
-                    </td>
-                    <td headers="newsDate">
-                        2015/06/22
-                    </td>
-                    <td class="newsListAll" headers="newsTitle">
-					<a href="#2015062204" data-rel="popup" data-position-to="window" data-transition="fade">歡慶故宮90周年院慶 邀您一同寫下與故宮文物的美好遇合，「與國寶對話‧故宮文物與我」徵文比賽 即日起開跑！</a></td>
-                </tr>
-<div data-role="popup" id="2015062204">
-      <div data-role="header">
-        <h2>新聞專區</h2>
-      </div>
-
-      <div data-role="main" class="ui-content">
-        <h2>歡慶故宮90周年院慶 邀您一同寫下與故宮文物的美好遇合
-「與國寶對話‧故宮文物與我」徵文比賽 即日起開跑！</h2>
-        <p>在故宮90歲生日之時，讓我們一同寫下與故宮文物相遇的故事，經由「與國寶對話‧故宮文物與我」徵文比賽，將發掘更多您記憶中與故宮的美好遇合。期待各方書寫能手撰述故宮文物在記憶中觸動人心的美麗痕跡！即日起至8月31日止徵稿，您可選擇一件最喜歡的文物作為創作主題，寫下文物與您生命經驗的對話。
- 
-這次徵文比賽，報名免費，歡迎大家踴躍參加!舉凡戶籍設在中華民國，自國小一年級至研究所學生，甚至各界社會人士均可免費報名，報名組別分為四大類組：國小、國中、高中職以及大專社會，得獎作者除了可獲得高額獎金外，並可獲得故宮「超夯」文創商品及公開表揚頒獎。獲獎結果出爐，預計在今年9月下旬於活動網站公布，並同步登載得獎作品於活動網站上，這麼多好康等著您，快快寄出您的作品吧。(★貼心小提醒：未滿 20 歲，想要參加比賽要先請你的法定代理人同意，附上簡章中簽名文件的參賽同意書，並附上你跟法定代理人之身分證明文件影本，否則報名沒有完成喔！)
- 
-每人限報名一件作品！您還在等什麼呢?快挑選一件你最喜歡文物吧，馬上寫下您記憶中的美好體驗，您可參考活動官網內的文物清單，或是利用故宮文物典藏系統搜尋讓您心動的文物。故宮也貼心地在活動網站上放置示範文章及影片，讓您自由點閱欣賞。收件地址：11199台北郵局第123-376信箱 「與國寶對話‧故宮文物與我徵文比賽」執行小組 鄭羽恩小姐收。欲知更多報名資訊及詳細內容，歡迎至國立故宮博物院「與國寶對話」活動官網http://www.jfartwork.com.tw/104npm查詢。或請洽詢主辦單位聯絡電話：+886-(2)-28812021分機2775 鄧小姐、參賽小組聯絡電話：0800-784666(活動專線免付費電話)分機14周小姐。
- 
- 
-新聞聯絡人：
-國立故宮博物院國會暨公共事務室李東霖 +886-(2)-2881-2021*68867 Email: tunglin@npm.gov.tw
-國立故宮博物院國會暨公共事務室林承億 +886-(2)-2881-2021*68991 Email: aldophlin@npm.gov.tw
-國立故宮博物院國會暨公共事務室洪瑞聯 +886-(2)-2881-2021*68872 Email: rayh0926@npm.gov.tw</p>
-        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-left" data-rel="back">Go Back</a>
-      </div>
-
-      <div data-role="footer">
-        <h2>國立故宮博物館</h2>
-      </div>
-</div>
-         
-            
-                <tr class="lineStyle1">
-                    <td headers="newsLayer">
-                        新聞專區
-                    </td>
-                    <td headers="newsDate">
-                        2015/06/22
-                    </td>
-                    <td class="newsListAll" headers="newsTitle">
- 					<a href="#2015062203" data-rel="popup" data-position-to="window" data-transition="fade">來自乾隆皇帝夏朝冠的創意燈飾設計及南宋冰裂紋-造就故宮南院園區景觀燈</a></td>
-                 
-                </tr>
-<div data-role="popup" id="2015062203">
-      <div data-role="header">
-        <h2>新聞專區</h2>
-      </div>
-
-      <div data-role="main" class="ui-content">
-        <h2>來自乾隆皇帝夏朝冠的創意燈飾設計及南宋冰裂紋-造就故宮南院園區景觀燈</h2>
-        <p>國立故宮博物院南部院區50公頃園區景觀燈，沿步道系統及休憩據點設置，為構成環境意象的重要視覺元素之一，藉由設計具有特色的景觀燈樣式，傳達故宮園區之象徵意義。故宮表示，一座博物館的美，需要「路燈」的照耀。年底即將開館試營運的故宮南院，將處處可見融合故宮文化與特色的路燈，為民眾照亮博物館園區的道路。
-
-故宮南院景觀園區路燈設計概念來自國立故宮博物院乾隆皇帝的夏朝冠，帽頂上的大東珠轉換為燈頂上的藍光LED燈、燈前緣有一紅光LED燈、燈下方燈罩為黃光LED燈，燈桿為總長240公分的鋁合金雕花管燈柱以代表吉祥之雲紋圖樣構成，雲紋圖案取自臺北院區的白色圍欄之柱頭，象徵南北同調，故宮不分家，而底部燈座則以石板將故宮北院以及故宮南院的識別圖樣（LOGO）雕刻其上，將故宮南院亞洲藝術文化中心的精神，透過遍佈全園區的一百多支乾隆帽高燈造型以及燈光的引導，塑造整體園區場域特殊景觀。
-      
-除此之外，故宮南院景觀園區中設置「水景花園景觀矮燈」，其設計構想來自南宋官窯開始出現的冰裂紋，不規則圖案蘊藏幾何規律的自然冰裂紋路頗受歡迎，也常運用在建築配件如門窗、庭園、家具等的設計，園區矮燈以冰裂紋作裝飾，延伸故宮園區之文化藝術風格，與乾隆帽高燈搭配，傳達一種園區的整體氛圍。此燈採用低耗能之LED燈。故宮表示，利用乾隆帽高燈及景觀矮燈搭配之照明設計，除增加夜間照明安全亦可表現夜間豐富景觀情境。
-新聞聯絡人：
-國立故宮博物院國會暨公共事務室李東霖 +886-(2)-2881-2021*68867 Email: tunglin@npm.gov.tw
-國立故宮博物院國會暨公共事務室林承億 +886-(2)-2881-2021*68991 Email: aldophlin@npm.gov.tw
-國立故宮博物院國會暨公共事務室洪瑞聯 +886-(2)-2881-2021*68872 Email: rayh0926@npm.gov.tw</p>
-        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-left" data-rel="back">Go Back</a>
-      </div>
-
-      <div data-role="footer">
-        <h2>國立故宮博物館</h2>
-      </div>
-</div> 
- 
-                <tr class="">
-                    <td headers="newsLayer">
-                        最新展覽異動
-                    </td>
-                    <td headers="newsDate">
-                        2015/06/22
-                    </td>
-                    <td class="newsListAll" headers="newsTitle">
-					<a href="#2015062202" data-rel="popup" data-position-to="window" data-transition="fade">303陳列室「皇帝的鏡子—清宮鏡鑑文化與典藏特展」104年6月26日，8:30-11:30更換展件，暫時關閉，敬請見諒。</a></td>
-                
-                </tr>
-  <div data-role="popup" id="2015062202">
-      <div data-role="header">
-        <h2>最新展覽異動</h2>
-      </div>
-
-      <div data-role="main" class="ui-content">
-        <h2>303陳列室「皇帝的鏡子—清宮鏡鑑文化與典藏特展」104年6月26日，8:30-11:30更換展件，暫時關閉，敬請見諒。</h2>
-        <p>303陳列室「皇帝的鏡子—清宮鏡鑑文化與典藏特展」104年6月26日，8:30-11:30更換展件，暫時關閉，敬請見諒。</p>
-        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-left" data-rel="back">Go Back</a>
-      </div>
-
-      <div data-role="footer">
-        <h2>國立故宮博物館</h2>
-      </div>
-</div>           
-                <tr class="lineStyle1">
-                    <td headers="newsLayer">
-                        新聞專區
-                    </td>
-                    <td headers="newsDate">
-                        2015/06/17
-                    </td>
-                    <td class="newsListAll" headers="newsTitle">
-   					<a href="#2015061701" data-rel="popup" data-position-to="window" data-transition="fade">來自郵票王國的文創精品—故宮90周年院慶紀念套票發行</a></td>
-                
-                </tr>
-				
-   <div data-role="popup" id="2015061701">
-      <div data-role="header">
-        <h2>新聞專區</h2>
-      </div>
-
-      <div data-role="main" class="ui-content">
-        <h2>來自郵票王國的文創精品—故宮90周年院慶紀念套票發行</h2>
-        <p>故宮文創產品再創新!國立故宮博物院為慶祝九十周年院慶，特別與「郵票王國」列支敦士登郵政公司合作今(17)日發行1組10枚的「九十周年院慶紀念套票」，內容除了以國立故宮博物院北部院區院景圖，以及即將於今年底開館試營運的南部院區－亞洲藝術文化博物館的經典建築物為題材外，特別精選八件故宮舉世聞名的藏品及南院文物，包括「北宋 汝窯 青瓷蓮花式溫碗」、「東漢 玉辟邪」、「印度 平口雙柄蓋碗」、「唐人 宮樂圖」、「宋人 富貴花貍」、「元 黃公望富春山居圖」、「龍藏經清康熙八年內府泥金藏文寫本」及「西周晚期 頌壺」等，內容豐富，印製精美，令人目不暇給。
- 
-「九十周年院慶紀念套票」由列支敦士登印製，每枚郵票的票面幣值係以瑞士法朗呈現，每枚0.55元，每套10枚，加上故宮精心設計的特殊包裝，以及印有列支敦士登戳記的紙質護郵袋，美感及質感兼具，僅限量發行500套，限量發行，售完為止，每套售價新台幣900元。該商品主要於本院院區禮品部及網路商城展售，網路商城客服專線：2883-6887。
- 
-國立故宮博物院為慶祝九十周年與列支敦士登王室在今年春夏共同主辦《阿爾卑斯皇冠：列支敦士登秘藏瑰寶展》，展期自即日起展至8月31日止，該展覽展示王室收藏五百餘年百餘件真跡名畫，從文藝復興到巴洛克藝術，包含拉斐爾（Raphael）、魯本斯（Peter Paul Rubens）、安東尼．范戴克（Anthony van Dyck）及荷蘭黃金時期畫家林布蘭（Rembrandt van Rijn）等藝術大師傑作，共分八大展區118件真跡展品。本次雙方再次合作，透過豐富的題材與華麗的色彩，將故宮南北院區景色及國寶文物濃縮於方寸之間，非常具有典藏紀念價值。
-新聞聯絡人：
-國立故宮博物院國會暨公共事務室李東霖 +886-(2)-2881-2021*68867 Email: tunglin@npm.gov.tw
-國立故宮博物院國會暨公共事務室林承億 +886-(2)-2881-2021*68991 Email: aldophlin@npm.gov.tw
-國立故宮博物院國會暨公共事務室洪瑞聯 +886-(2)-2881-2021*68872 Email: rayh0926@npm.gov.tw</p>
-        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-left" data-rel="back">Go Back</a>
-      </div>
-
-      <div data-role="footer">
-        <h2>國立故宮博物館</h2>
-      </div>
-</div>                  
-                <tr class="">
-                    <td headers="newsLayer">
-                        新聞專區
-                    </td>
-                    <td headers="newsDate">
-                        2015/06/17
-                    </td>
-                    <td class="newsListAll" headers="newsTitle">
-    					<a href="#2015061700" data-rel="popup" data-position-to="window" data-transition="fade">故宮後續委託辦理之博物館商品銷售及餐飲服務
-目前一切按照採購程序進行</a></td>
-                
-                </tr>
-    <div data-role="popup" id="2015061700">
-      <div data-role="header">
-        <h2>新聞專區</h2>
-      </div>
-
-      <div data-role="main" class="ui-content">
-        <h2>故宮後續委託辦理之博物館商品銷售及餐飲服務
-目前一切按照採購程序進行</h2>
-        <p>立法院院會於104年5月19日三讀通過「合作社法部分條文修正案」，增訂合作社受政府委辦業務之比例限制等事項，業經總統於6月3日公布，三日後生效施行。故宮表示，故宮與消合社對於委託辦理之博物館商品銷售及餐飲服務，均訂有合約執行，基於法律變更及依法行政原則，依法須提前終止合約，於委辦業務確定終止日期8月5日前，故宮須與消合社辦理現務了結、業務移交、財務結算、硬體設備設施及財產點交、存貨盤點與移轉價購等清算作業。
-
-故宮指出，消合社當須依據「大量解僱勞工保護法」第4條及第5條規定，於解僱勞工60日前應將解僱計畫書陳報主管機關及相關單位及人員並公告揭示，且應即本於勞資自治精神進行協商，甚或提出替代方案等，同時須依勞動基準法及勞工退休金條例等規定辦理預告終止勞工契約及員工資遣與就業安置等後續相關作業。
-
-故宮表示，後續委託辦理之博物館商品銷售及餐飲服務，目前一切按照採購程序進行，如能有廠商順利接手，將不致本院該項業務有中斷之虞。
-新聞聯絡人：
-國立故宮博物院國會暨公共事務室李東霖 +886-(2)-2881-2021*68867 Email: tunglin@npm.gov.tw
-國立故宮博物院國會暨公共事務室林承億 +886-(2)-2881-2021*68991 Email: aldophlin@npm.gov.tw
-國立故宮博物院國會暨公共事務室洪瑞聯 +886-(2)-2881-2021*68872 Email: rayh0926@npm.gov.tw</p>
-        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-left" data-rel="back">Go Back</a>
-      </div>
-
-      <div data-role="footer">
-        <h2>國立故宮博物館</h2>
-      </div>
-</div>                       
-                <tr class="lineStyle1">
-                    <td headers="newsLayer">
-                        最新消息
-                    </td>
-                    <td headers="newsDate">
-                        2015/06/16
-                    </td>
-                    <td class="newsListAll" headers="newsTitle">
-    					<a href="#2015061600" data-rel="popup" data-position-to="window" data-transition="fade">公告辦理「大故宮計畫」環境影響評估現場勘察及公聽會</a></td>
-                </tr>
-				
-   <div data-role="popup" id="2015061600">
-      <div data-role="header">
-        <h2>新聞專區</h2>
-      </div>
-
-      <div data-role="main" class="ui-content">
-        <h2>公告辦理「大故宮計畫」環境影響評估現場勘察及公聽會</h2>
-        <p>依據「環境影響評估法」第12條第1項及同法施行細則第24條、24條之1及第26條規定辦理環境影響評估現場勘察(104年6月27日上午9時30分)及公聽會(104年7月4日下午2時)，以廣泛蒐集意見。敬請關心民眾或團體撥冗參加。</p>
-        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-left" data-rel="back">Go Back</a>
-      </div>
-
-      <div data-role="footer">
-        <h2>國立故宮博物館</h2>
-      </div>
-</div>           
-            
-    </tbody></table>
-	 
+        <div id="nowtime"></div>
+		已付款人數：<div id="ispay"></div>
+		現金餘額  ：<div id="cash"></div>
+				<div>
+		 <a href="#page_1" class="ui-btn ui-corner-all ui-shadow " data-transition="pop">我要訂餐</a>
+			</div>
+				<div>
+		 <a href="#page_2" class="ui-btn ui-corner-all ui-shadow " data-transition="pop">訂單查詢</a>
+		 		 </div>
+				 <div>
+		 <a href="#page_3" class="ui-btn ui-corner-all ui-shadow " data-transition="pop">歷史紀錄</a>
+		 		 </div>
 	  </div >   
    
 	</div>
-  <div data-role="footer" >
-    <h2>Copy right by KUAS_MIS_Lanmor</h2>
+  <div data-role="footer" data-position="fixed">
+    <h2>訂餐系統</h2>
   </div>
 </div> 
 
-
-<div data-role="page" id="page_1">
-
-<div data-role="popup" id="login1">
-      <div data-role="header">
-	  <p> <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-left" data-rel="back">Go Back</a></p>
-         <div id="result"><h2>會員登錄</h2></div>
-      </div>
-
-      <div data-role="main" class="ui-content">
-	  
-	
- 帳號：<input type="text" name=""></input>
- 密碼：<input type="password" name=""></input>
-<p><a href="#homelogin" class="ui-btn ui-corner-all ui-shadow " data-transition="pop">登入</a></p>
-
-
-		
-      </div>
-
-      <div data-role="footer">
-        <h2>國立故宮博物館</h2>
-      </div>
-</div>
-
-
-
-  <div data-role="header" class="tophaed">
-    <h1>國立故宮博物館-當期展覽</h1>
-	    <a href="#home" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left" data-transition="pop">Home</a>
-         <a href="#login1"  data-rel="popup" data-position-to="window" data-transition="fade" >會員登錄</a>
-		 <a href="#page_1" class="ui-btn ui-corner-all ui-shadow " data-transition="pop">當期展覽</a>
-		 <a href="#page_2" class="ui-btn ui-corner-all ui-shadow " data-transition="pop">展覽介紹</a>
-		 <a href="#page_3" class="ui-btn ui-corner-all ui-shadow " data-transition="pop">導覽功能</a>
-
-  </div>
-
-  <div data-role="main" class="ui-content">
-  
-  
-    <div class="ui-grid-a">
-      <div class="ui-block-a">
-        <a href="#now_1"  data-rel="popup" data-position-to="window" data-transition="fade"  class="ui-btn ui-corner-all ui-shadow"><img src="images/b_08009305.jpg"></a><br>
-        <p align="center" ><span>銀燦黔彩─貴州少數民族服飾特展</span></p>
-		<p align="center" >展期：2015/06/12~2015/09/01</p>
-		<p align="center" >陳列室：展覽區一　103,105,107</p>
-      </div>
-	  
-<div data-role="popup" id="now_1">
-      <div data-role="header">
-	  <p> <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-left" data-rel="back">Go Back</a></p>
-         <div style="text-align : center;" ><h2>銀燦黔彩─貴州少數民族服飾特展</h2></div>
-      </div>
-
-      <div data-role="main" class="ui-content">
-	  
-	<div id="images" style="text-align : center;">
-<img src="images/now_01.jpg">
-</div>
- 服飾是反映族群文化的重要形象特徵，其穿著搭配與紋樣圖案的創作運用，不僅代表族群的社會制度與位階倫理，更可呈現一地風土歷史交揉轉衍的獨特文化意涵。位居中國西南的貴州，境內重巒疊嶂，自然風貌錯綜多樣。千百年前，不同族群即已在此墾殖經營，並融匯出絢麗繽紛的文化風采。各民族除了保留極富地域特色的傳統服飾，亦延續著特色鮮明、技法獨到的編織工藝，將歷史、傳說、信仰、風俗等元素灌注其中，形塑了豐富多樣，又別具情調的服飾體系，成為彰顯族群形象與文化特色的重要徽誌。「銀燦黔彩─貴州少數民族服飾」特展由國立故宮博物院與貴州省民族博物館、輔仁大學織品服裝學系共同策劃主辦，精選服裝、織品、銀飾，以及最足反映黔省史地風物的珍貴圖籍文獻，引領觀眾分由不同面向一攬貴州少數民族服飾之真善美盛。
-
-      <div data-role="footer">
-        <h2>國立故宮博物館</h2>
-      </div>
-</div>
-
-</div>
-
-      <div class="ui-block-b">
-        <a href="#now_2"  data-rel="popup" data-position-to="window" data-transition="fade"  class="ui-btn ui-corner-all ui-shadow"><img src="images/b_08009343.jpg"></a><br>
-         <p align="center" ><span>古畫動漫：明人畫出警入蹕圖</span></p>
-		 <p align="center" >展期：常設展 2015/05/01~2015/08/31	</p>
-		<p align="center" >陳列室：展覽區一　102</p>
-      </div>
-	  
-	  <div data-role="popup" id="now_2">
-      <div data-role="header">
-	  <p> <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-left" data-rel="back">Go Back</a></p>
-         <div style="text-align : center;" ><h2>古畫動漫：明人畫出警入蹕圖</h2></div>
-      </div>
-
-      <div data-role="main" class="ui-content">
-	  
-	<div id="images" style="text-align : center;">
-<img src="images/now_02.jpg">
-</div>
-
-〈出警圖〉與〈入蹕圖〉是各自分開的兩幅長卷，但因畫家將皇室謁陵的時空歷程濃縮於兩幅長卷，故常被合稱為「出警入蹕圖」。〈出警圖〉描繪皇帝騎馬，由陸路出京；〈入蹕圖〉則刻畫皇帝乘船，走水路還宮。這兩幅長卷也是院藏手卷畫作中最長的兩幅，畫中人物眾多，場面宏偉，是歷代畫作中少見的鉅作。
-      <div data-role="footer">
-        <h2>國立故宮博物館</h2>
-      </div>
-</div>
-
-</div>
-    </div>
-	
-	
-      <div class="ui-grid-a">
-      <div class="ui-block-a">
-        <a href="#now_3"  data-rel="popup" data-position-to="window" data-transition="fade"  class="ui-btn ui-corner-all ui-shadow" ><img src="images/b_08009216.jpg"></a><br>
-        <p align="center" ><span align="center">阿爾卑斯皇冠－列支敦士登秘藏瑰寶展</span></p>
-		<p align="center">展期：2015/04/17~2015/08/31</p>
-		<p align="center" >陳列室：展覽區二　圖書文獻大樓一樓特展區</p>
-      </div>
-	  <div data-role="popup" id="now_3">
-      <div data-role="header">
-	  <p> <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-left" data-rel="back">Go Back</a></p>
-         <div style="text-align : center;" ><h2>阿爾卑斯皇冠－列支敦士登秘藏瑰寶展</h2></div>
-      </div>
-
-      <div data-role="main" class="ui-content">
-	  
-	<div id="images" style="text-align : center;">
-<img src="images/now_03.jpg">
-</div>
-
-列支敦士登王室的藝術收藏始於16世紀，五百餘年來累積成質量俱豐的歐洲藝術珍藏寶庫，是世界上最重要的私人藝術珍藏之一。列支敦士登的王室瑰寶，秘藏於列支敦士登建造在維也納的花園宮、城市宮，以及王室家族居住的瓦都茲城堡，難以一窺堂奧。
-
-  本次展覽展出百餘件列支敦士登王室秘藏瑰寶，由聯合報系、國立故宮博物院、列支敦士登王室主辦《阿爾卑斯皇冠：列支敦士登秘藏瑰寶展》，精選百餘件列支敦士登王室秘藏珍品，由「文藝復興三傑」之一拉斐爾（Raphael）到巴洛克藝術巨匠魯本斯（Peter Paul Rubens）、英王查理一世宮廷首席畫家安東尼．范戴克（Anthony van Dyck）、荷蘭黃金時期畫家林布蘭（Rembrandt van Rijn）等藝術大師傑作，儼然一部精采的西洋藝術史，今年度最華麗精緻的收藏展，跨越五百年西洋藝術史，台灣廣大藝術愛好者絕對不能錯過的特展！
-      <div data-role="footer">
-        <h2>國立故宮博物館</h2>
-      </div>
-</div>
-
-</div>
-
-      <div class="ui-block-b">
-        <a href="#now_4"  data-rel="popup" data-position-to="window" data-transition="fade"  class="ui-btn ui-corner-all ui-shadow"><img src="images/b_08009219.jpg"></a><br>
-         <p align="center" ><span>毫素風采—明末清初的女性繪畫</span></p>
-		 <p align="center" >展期：2015/04/01~2015/06/25</p>
-		<p align="center" >陳列室：展覽區一　212</p>
-      </div>
-	  
-	  
-	  	  <div data-role="popup" id="now_4">
-      <div data-role="header">
-	  <p> <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-left" data-rel="back">Go Back</a></p>
-         <div style="text-align : center;" ><h2>毫素風采—明末清初的女性繪畫</h2></div>
-      </div>
-
-      <div data-role="main" class="ui-content">
-	  
-	<div id="images" style="text-align : center;">
-<img src="images/now_04.jpg">
-</div>
-
-此次特展，遴選明末清初具代表性的女性畫家，如馬守真（1548－1604）、邢慈靜（1573－1640後）、趙文俶（1595－1634）、黃媛介（1614或1620－1669前）、李因（1610－1685）、顧媚（1619－1663或1664）、李柁那（約活動於明朝晚期）與林雪（約活動於十七世紀）等人，展出她們的山水、人物、花卉、草蟲等畫作。無論工筆寫意或水墨設色、筆墨或構圖，莫不體現出女性走向公眾視線的卓然風姿。     <div data-role="footer">
-        <h2>國立故宮博物館</h2>
-      </div>
-</div>
-
-</div>
-
-
-    </div>
-	 
-   
-	</div>
-  <div data-role="footer" >
-    <h2>Copy right by KUAS_MIS_Lanmor</h2>
-  </div>
-</div> 
 
 
 
