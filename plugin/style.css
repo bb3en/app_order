@@ -1,0 +1,31 @@
+body {
+        margin: 20px;
+        background-color:#000000;
+	
+        }
+
+.tophaed {
+     background-image: url("../images/pic1760.jpg"); 
+        }
+
+.footst {
+     background-image: url("../images/pic1760.jpg"); 
+        }
+
+h1{
+      font-size:30px;
+      color:#FFFFFF;
+    }
+
+h3{
+      font-size:14px;
+      color:#FFFFFF;
+      font-family:²Ó©úÅé;
+    }
+
+.ui-dialog .ui-header, 
+.ui-dialog .ui-content, 
+.ui-dialog .ui-footer { 
+	max-width: 500px; 
+	margin: 10% auto 15px auto; 
+}
