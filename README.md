@@ -25,3 +25,13 @@ Database
 mapping image
 
 <img src="http://bb3en.github.io/app_order/ts.svg">
+
+時序圖程式碼：
+Title:訂餐系統地圖
+Login->Main: 登入
+Main->Order: 點餐
+Order->NewOrder: 菜單
+Main-->>Ordersh: 訂單查詢
+Ordersh->orderdata:調資料
+History->orderdata:調資料
+Main-->>History: 歷史查詢
