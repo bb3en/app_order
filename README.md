@@ -24,7 +24,7 @@ Database
 
 mapping image
 
-<img src="http://bb3en.github.io/app_order/ts.svg">
+<img src="http://bb3en.github.io/app_order/ts1.svg">
 
 時序圖程式碼：
 Title:訂餐系統地圖
