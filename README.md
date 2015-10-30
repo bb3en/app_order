@@ -22,25 +22,24 @@ main.html [顯示今日日期、訂餐人數、已付款人數、點數餘額 ]
 
 ## Database
 ```
-會員
-會員ID(PK),帳號,密碼,姓名,手機
+會員[member]
+會員ID(PK)[member_id],學號[member_acc],密碼[member_pass],姓名[member_name]
 ```
 ```
-廠商
-廠商ID(PK),廠商名稱
+廠商[provide]
+廠商ID(PK)[provide_id],廠商名稱[provide_name]
 ```
 ```
-菜單
-菜單ID(PK),餐點名稱,價格,廠商ID(FK)
+菜單[menu]
+菜單ID(PK)[menu_id],餐點名稱[menu_name],價格[menu_price],廠商ID(FK)
 ```
 ```
-取餐地點
-取餐地點ID(PK),地點名稱
+取餐地點[location]
+取餐地點ID(PK)[location_id],地點名稱[location_name]
 ```
 ```
-訂購紀錄
-
-訂單ID,訂單日期,廠商名稱,餐點名稱,價格,數量,總額,取餐地點,會員ID(FK)
+訂購紀錄[record]
+訂單ID[record_id],訂單日期[record_date],廠商名稱[provide_name],餐點名稱[menu_name],價格[menu_price],數量[],總額,取餐地點[location],會員ID(FK)
 ```
 ## mapping image
 
