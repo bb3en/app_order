@@ -1,22 +1,22 @@
 
 ## APP mapping
 
-**登入**login.html (session)
+Intro **登入**login.html (session)
 
-main.html [顯示今日日期、訂餐人數、已付款人數、點數餘額 ] 
+0.index.html [顯示今日日期、訂餐人數、已付款人數、點數餘額 ]
 
-1. **我要訂餐**(order.html) 
+1.**我要訂餐**(order.html) 
 ```
 選擇日期[如果今日已訂餐則會提示已訂過]->選擇廠商->選擇餐點數量(至多2份)->選擇取貨點->送出(訂單成立)
 
 ```
-2. **訂餐查詢與結帳**(ordersh.html) 
+2.**訂餐查詢與結帳**(ordersh.html) 
 ```
 選擇訂單[可取消訂單,結帳後不可取消]->結帳->確認結帳->扣除餘額
 
 ```
 
-3. **歷史記錄**(history.html)
+3**歷史記錄**(history.html)
     
 
 
