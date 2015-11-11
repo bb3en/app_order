@@ -23,7 +23,7 @@ Intro **登入**login.html (session)
 ## Database
 ```
 會員[member]
-會員ID(PK)[member_id],學號[member_acc],密碼[member_pass],姓名[member_name]
+會員ID(PK)[member_id],學號[member_acc],密碼[member_pass],姓名[member_name],身份[member_iden]
 ```
 ```
 廠商[provide]
@@ -35,11 +35,16 @@ Intro **登入**login.html (session)
 ```
 ```
 取餐地點[region]
-取餐地點ID(PK)[region_id],地點名稱[region_name]
+取餐地點ID(PK)[region_id],取餐地點[region_name]
 ```
 ```
-訂購紀錄[record]
-訂單ID[record_id],訂單日期[record_date],數量[record_q],總額[record_sum],取餐ID[region_id](FK),地點名稱[region_name],會員ID[member_id](FK),菜單ID[menu_ID](FK),價格[menu_price],廠商名稱[provide_name]
+客戶訂單[record]
+客戶訂單ID(PK)[record_id],客戶訂單日期[record_date],數量[record_q],總額[record_sum],客戶訂單狀態[record_status],取餐ID[region_id](FK),地點名稱[region_name],會員ID[member_id](FK),菜單ID[menu_ID](FK),價格[menu_price],廠商名稱[provide_name]
+```
+廠商訂單:每個廠商一天三張單,PHP歸集客戶訂單,三張單依三個地區分別
+```
+廠商訂單[check]
+廠商訂單ID(PK)[check_id],廠商訂單狀態[check_status],廠商訂單總額[check_sum],廠商訂單日期[check_date],取餐地點ID[region_id](FK)
 ```
 ## mapping image
 
