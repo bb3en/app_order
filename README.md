@@ -7,7 +7,7 @@ Intro **登入**login.html (session)
 
 1.**我要訂餐**(order.html) 
 ```
-選擇日期[如果今日已訂餐則會提示已訂過]->選擇廠商->選擇餐點數量(至多2份)->選擇取貨點->送出(訂單成立)
+選擇日期[如果今日已訂餐則會提示已訂過]->選擇廠商,餐點數量(至多2份),取貨點->送出(訂單成立)
 
 ```
 2.**訂餐查詢與結帳**(ordersh.html) 
@@ -34,12 +34,12 @@ Intro **登入**login.html (session)
 菜單ID(PK)[menu_id],餐點名稱[menu_name],價格[menu_price],廠商ID(FK)
 ```
 ```
-取餐地點[location]
-取餐地點ID(PK)[location_id],地點名稱[location_name]
+取餐地點[region]
+取餐地點ID(PK)[region_id],地點名稱[region_name]
 ```
 ```
 訂購紀錄[record]
-訂單ID[record_id],訂單日期[record_date],廠商名稱[provide_name],餐點名稱[menu_name],價格[menu_price],數量[],總額,取餐地點[location],會員ID(FK)
+訂單ID[record_id],訂單日期[record_date],數量[record_q],總額[record_sum],取餐ID[region_id](FK),地點名稱[region_name],會員ID[member_id](FK),菜單ID[menu_ID](FK),價格[menu_price],廠商名稱[provide_name]
 ```
 ## mapping image
 
