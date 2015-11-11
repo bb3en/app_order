@@ -12,6 +12,7 @@
 <script src="plugin/jquery.mobile-1.4.5.min.js"></script>
 
 <script>
+
 Date.prototype.Format = function (fmt) { //author: meizz 
     var o = {
         "M+": this.getMonth() + 1, //月份 
@@ -28,28 +29,19 @@ Date.prototype.Format = function (fmt) { //author: meizz
     return fmt;
 }
 
-function clickCounter() {
-    if(typeof(Storage) !== "undefined") {
-        if (localStorage.whataboutnow) {
-            localStorage.whataboutnow = "會員登出";
-        } else {
-            localStorage.whataboutnow = "會員登錄";
-        }
-        document.getElementById("result").innerHTML =  localStorage.whataboutnow;
-    } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-    }
-}
-
 $(document).ready(function () {
 var d = new Date().Format("yyyy-MM-dd hh:mm");
-var d2 = new Date().Format("yyyy-MM-dd");
 localStorage.whataboutnow = "會員登錄";
 document.getElementById("nowtime").innerHTML =  d;
 document.getElementById("result").innerHTML =  localStorage.whataboutnow;
-document.getElementById("nowtime2").innerHTML =  d2;
+
 
 });
+
+function loadtime() {
+    var d2 = new Date().Format("yyyy-MM-dd");
+    document.getElementById("nowtime2").innerHTML =  d2;
+}
 </script>
 
 
@@ -63,7 +55,7 @@ document.getElementById("nowtime2").innerHTML =  d2;
 
 
 
-<div data-role="popup" id="order">
+<div data-role="popup" id="order" onload="loadtime();">
       <div data-role="header">
 
       </div>
@@ -73,25 +65,37 @@ document.getElementById("nowtime2").innerHTML =  d2;
 	
  <div >日期：<font id="nowtime2"></font></div>
  
-  <select name="provide">選擇廠商
+  選擇廠商<select name="provide1">
  <option value="provide_0">廣八自助餐</option>
 </select>
  
  選擇餐點
- <select name="menusession_1">
- <option value="menu_0">無</option>
- <option value="menu_1">雞腿便當</option>
-<option value="menu_2">豬排便當</option>
-<option value="menu_3">排骨便當</option>
-<option value="menu_4">雞排便當</option>
+ <select name="menusession_1" value="menu1_0">
+ <option value="menu1_0">無</option>
+ <option value="menu1_1">雞腿便當</option>
+<option value="menu1_2">豬排便當</option>
+<option value="menu1_3">排骨便當</option>
+<option value="menu1_4">雞排便當</option>
 </select>
 
- <select name="menusession_2">
- <option value="menu_0">無</option>
- <option value="menu_1">雞腿便當</option>
-<option value="menu_2">豬排便當</option>
-<option value="menu_3">排骨便當</option>
-<option value="menu_4">雞排便當</option>
+選擇廠商<select name="provide2">
+ <option value="provide_0">廣八自助餐</option>
+</select>
+ 
+ 選擇餐點
+ <select name="menusession_2" value="menu2_0">
+ <option value="menu2_0">無</option>
+ <option value="menu2_1">雞腿便當</option>
+<option value="menu2_2">豬排便當</option>
+<option value="menu2_3">排骨便當</option>
+<option value="menu2_4">雞排便當</option>
+</select>
+
+ 選擇取餐地點
+ <select name="region" >
+ <option value="region_0">管理學院</option>
+ <option value="region_1">人文學院</option>
+<option value="region_2">行政大樓</option>
 </select>
  
 <p><a href="#homelogin" class="ui-btn ui-corner-all ui-shadow " data-transition="pop">送出</a></p>
@@ -107,33 +111,33 @@ document.getElementById("nowtime2").innerHTML =  d2;
     <h1>KUAS燕巢訂餐系統-首頁</h1>
 
  
-  </div>
+        </div>
 
-  <div data-role="main" class="ui-content">
+          <div data-role="main" class="ui-content">
  
 
-<div class="newtable"> 
+            <div class="newtable"> 
 
-<a >最新消息</a>
-<p></p>
-        <div >目前時間  ：<font id="nowtime"></font></div>
-		已付款人數：<div id="ispay"></div>
-		現金餘額  ：<div id="cash"></div>
-				<div>
-<a href="#order" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-shadow ">我要訂餐 </a>
+              <a >最新消息</a>
+            <p></p>
+            <div >目前時間  ：<font id="nowtime"></font></div>
+		        已付款人數：<div id="ispay"></div>
+		        現金餘額  ：<div id="cash"></div>
+				    <div>
+   <a href="#order" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-shadow ">我要訂餐 </a>
 			</div>
 				<div>
-<a href="#page_2" class="ui-btn ui-corner-all ui-shadow " data-transition="pop">訂單查詢</a>
+   <a href="#page_2" class="ui-btn ui-corner-all ui-shadow " data-transition="pop">訂單查詢</a>
 		 		 </div>
 				 <div>
 		 <a href="#page_3" class="ui-btn ui-corner-all ui-shadow " data-transition="pop">歷史紀錄</a>
 		 		 </div>
 	  </div >   
    
-	</div>
-  <div data-role="footer" data-position="fixed">
+	 </div>
+   <div data-role="footer" data-position="fixed">
     <h2>訂餐系統</h2>
-  </div>
+   </div>
 </div> 
 
 
