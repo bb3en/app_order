@@ -23,7 +23,7 @@ Intro **登入**login.html (session)
 ## Database
 ```
 會員[member]
-會員ID(PK)[member_id],學號[member_acc],密碼[member_pass],姓名[member_name],身份[member_iden]
+會員ID(PK)[member_id],學號[member_acc],密碼[member_pass],姓名[member_name],身份[member_iden],餘額[member_cash]
 ```
 ```
 廠商[provide]
