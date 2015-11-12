@@ -43,7 +43,7 @@ Intro **登入**login.html (session)
 ```
 ```
 客戶訂單紀錄[record_item]
-客戶訂單紀錄流水號[member_id+record_id],客戶訂單ID(PK)[record_id](FK),菜單ID[menu_ID](FK),價格[menu_price],數量[item_q],廠商名稱[provide_name]
+客戶訂單紀錄流水號[serial](member_id+record_id),客戶訂單ID(PK)[record_id](FK),菜單ID[menu_ID](FK),價格[menu_price],數量[item_q],廠商名稱[provide_name]
 ```
 廠商訂單:每個廠商一天三張單,PHP歸集客戶訂單,三張單依三個地區分別
 ```
