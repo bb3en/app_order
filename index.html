@@ -7,7 +7,6 @@
 <link rel="stylesheet" href="plugin/jquery.mobile-1.4.5.min.css">
 <link rel="stylesheet" href="plugin/jqm-docs.css">
 <link rel="stylesheet" href="plugin/style.css">
-
 <script src="plugin/jquery-1.11.3.min.js"></script>
 <script src="plugin/jquery.mobile-1.4.5.min.js"></script>
 
@@ -41,9 +40,6 @@ function loadtime() {
     document.getElementById("nowtime2").innerHTML =  d2;
     var d3 = new Date().Format("yyyy-MM-dd");
     document.getElementById("nowtime3").innerHTML =  d3;
-    var d4= new Date().Format("yyyy-MM-dd");
-    document.getElementById("nowtime4").innerHTML =  d4;
-
 }
 </script>
 
@@ -106,20 +102,56 @@ function loadtime() {
 </div> 
 
 <!--訂單查詢-->  
- <div data-role="popup" id="order" >
+ <div data-role="popup" id="record" >
    <div data-role="header">
      <h2>訂單查詢</h2>
    </div>
   <div data-role="main" class="ui-content">
-    <div >日期：<font id="nowtime2"></font></div>
+    <div >日期：<font id="nowtime3"></font></div>
  <script type="text/javascript">
    loadtime();
  </script> 
+   <p>店家A</p>
+   <p>店家名稱：廣一便當店</p>
+   <p>餐點名稱：蜜汁雞腿飯</p>
+   <p>餐點價格：60元</p>
+   <p>餐點數量：1份</p>
+   <p>店家B</p>
+   <p>店家名稱：廣四拉麵店</p>
+   <p>餐點名稱：豚骨拉麵</p>
+   <p>餐點價格：65元</p>
+   <p>餐點數量：1份</p>
+   <p>訂單總額：125元</p>
+   <p>訂單狀態：處理中</p>
   </div>
   <div data-role="footer">
     
   </div>
-</div>   
+</div>
+<!--歷史訂單-->  
+ <div data-role="popup" id="history" >
+   <div data-role="header">
+     <h2>歷史訂單</h2>
+   </div>
+  <div data-role="main" class="ui-content">
+    
+   <p>店家A</p>
+   <p>店家名稱：廣一便當店</p>
+   <p>餐點名稱：蜜汁雞腿飯</p>
+   <p>餐點價格：60元</p>
+   <p>餐點數量：1份</p>
+   <p>店家B</p>
+   <p>店家名稱：廣四拉麵店</p>
+   <p>餐點名稱：豚骨拉麵</p>
+   <p>餐點價格：65元</p>
+   <p>餐點數量：1份</p>
+   <p>訂單總額：125元</p>
+   <p>訂單狀態：處理中</p>
+  </div>
+  <div data-role="footer">
+    
+  </div>
+</div>      
 <div data-role="header" class="tophaed">
   <h1>KUAS燕巢訂餐系統-首頁</h1>
 </div>
@@ -127,7 +159,7 @@ function loadtime() {
     <div class="newtable"> 
       <a >最新消息</a>
       <p></p>
-        目前時間  ：<div><font id="nowtime"></font></div>
+        <div>目前時間  ：<font id="nowtime"></font></div>
 		    已付款人數：<div id="ispay"></div>
 		    現金餘額  ：<div id="cash"></div>
 <div>
@@ -142,7 +174,7 @@ function loadtime() {
 	</div >     
 </div>
  <div data-role="footer" data-position="fixed">
-   <h2>訂餐系統</h2>
+   
  </div>
 </div> 
 
