@@ -1,9 +1,9 @@
 
-### APP mapping
+## APP mapping
 
 #Intro **登入**login.html (session)
 
-##客戶頁面 main.html [顯示客戶名稱、今日日期、訂餐人數、已付款人數、點數餘額 ]
+###客戶頁面 main.html [顯示客戶名稱、今日日期、訂餐人數、已付款人數、點數餘額 ]
 
 1.**我要訂餐**(#order) 
 ```
@@ -20,7 +20,7 @@
 以年及月作篩選，列出某月訂餐紀錄
 
 ``` 
-##廠商頁面 order.html [顯示廠商名稱、今日日期、訂餐人數、已付款人數、點數餘額]
+###廠商頁面 order.html [顯示廠商名稱、今日日期、訂餐人數、已付款人數、點數餘額]
 
 1.**訂單內容**(default) 
 ```
@@ -33,7 +33,7 @@
 
 ```
 
-##工作人員頁面 work.html [顯示工作人員名稱、'取餐點'、今日日期、訂餐人數、已付款人數、點數餘額]
+###工作人員頁面 work.html [顯示工作人員名稱、'取餐點'、今日日期、訂餐人數、已付款人數、點數餘額]
 
 1.**訂單內容**(default) 
 ```
@@ -42,7 +42,7 @@
 ```
 
 
-### Database
+## Database
 ```
 會員[member]
 會員ID(PK)[member_id],學號[member_acc],密碼[member_pass],姓名[member_name],身份[member_iden],餘額[member_cash]
