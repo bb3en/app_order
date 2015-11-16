@@ -48,6 +48,10 @@ function loadtime() {
 <div data-role="page">
 <!--我要訂餐-->  
  <div data-role="popup" id="order"  class="ui-corner-all" data-theme="a">
+ <div data-role="header">
+    <h2>今日訂單</h2>
+ </div>
+ <div data-role="main" class="ui-content">
  <script type="text/javascript">
    loadtime();
  </script>
@@ -86,7 +90,10 @@ function loadtime() {
         </select>
         <button type="submit" class="ui-corner-all">送出</button>
      </div>
-  </form>   
+  </form>
+  </div> 
+  <div data-role="footer" data-position="fixed">   
+</div>    
 </div> 
 
 <!--訂單查詢-->  
