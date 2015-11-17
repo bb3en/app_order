@@ -49,7 +49,7 @@ function loadtime() {
 <!--我要訂餐-->  
  <div data-role="popup" id="order"  class="ui-corner-all" data-theme="a">
  <div data-role="header">
-    <h2>今日訂單</h2>
+    <h2>我要訂餐</h2>
  </div>
  <div data-role="main" class="ui-content">
  <script type="text/javascript">
@@ -167,19 +167,27 @@ function loadtime() {
      <h2>歷史訂單</h2>
    </div>
   <div data-role="main" class="ui-content">
-    
-   <p>店家A</p>
-   <p>店家名稱：廣一便當店</p>
-   <p>餐點名稱：蜜汁雞腿飯</p>
-   <p>餐點價格：60元</p>
-   <p>餐點數量：1份</p>
-   <p>店家B</p>
-   <p>店家名稱：廣四拉麵店</p>
-   <p>餐點名稱：豚骨拉麵</p>
-   <p>餐點價格：65元</p>
-   <p>餐點數量：1份</p>
-   <p>訂單總額：125元</p>
-   <p>訂單狀態：處理中</p>
+    <form>
+      年：<select name="year" >
+              <option value="year_2015">2015</option>
+         </select>
+      月：<select name="month" >
+              <option value="month_1">1</option>
+              <option value="month_2">2</option>
+              <option value="month_3">3</option>
+              <option value="month_4">4</option>
+              <option value="month_5">5</option>
+              <option value="month_6">6</option>
+         </select>
+      <button type="submit" class="ui-corner-all">搜尋</button> 
+    </form>
+    <div>
+      <p>日期：2015/11/17</p>
+      <p>店家名稱：廣一便當店</p>
+      <p>餐點名稱：蜜汁雞腿飯</p>
+      <p>餐點價格：60元</p>
+      <p>餐點數量：1份</p>
+    </div>
   </div>
   <div data-role="footer">
     
@@ -196,7 +204,7 @@ function loadtime() {
 		    已付款人數：<div id="ispay"></div>
 		    現金餘額  ：<div id="cash"></div>
 <div>
-  <a href="#order" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ">我要訂餐 </a>
+  <a href="#order"  data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ">我要訂餐 </a>
 </div>
 <div>
   <a href="#record" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-shadow ">訂單查詢</a>
