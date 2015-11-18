@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>專題</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/[version]/jquery.mobile-[version].min.css" />
+	<script src="http://code.jquery.com/jquery-[version].min.js"></script>
+	<script src="http://code.jquery.com/mobile/[version]/jquery.mobile-[version].min.js"></script>
+</head>
+<body>
+<div data-role="page" id="indexpage">
+
+ <div data-role="header">
+   <h1>廠商訂單</h1>
+ </div>
+
+<div role="main" class="ui-content">
+  <div class="ui-grid-solo">
+    <div class="ui-block-a"><a href="#today_order" class="ui-btn ui-shadow ui-corner-all">今日訂單</a></div>
+  </div>
+  <div class="ui-grid-solo">
+    <div class="ui-block-a"><a href="#history_order" class="ui-btn ui-shadow ui-corner-all">歷史訂單</a></div>
+  </div>
+</div>
+	<div data-role="footer">
+		
+	</div>
+</div>
+
+<!--今日訂單-->
+<div data-role="page" id="today_order">
+
+ <div data-role="header">
+   <a href="#indexpage" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
+   <h1>今日訂單</h1>
+ </div>
+
+<div role="main" class="ui-content">
+
+<table>
+   <tr>
+    <td>日期：</td>
+    <td>2015/11/18</td>
+   </tr>
+    <tr>
+    <td>訂單狀態：</td>
+    <td>未核取</td>
+   </tr>
+    <tr>
+    <td>訂單總額：</td>
+    <td>2640元</td>
+   </tr>
+</table>
+<button  class="ui-corner-all" onclick=""  data-inline="true" >核單</button>	
+ <ul data-role="listview" data-inset="true">
+    <li data-role="list-divider" data-theme="b"><h1>訂單A</h1></li>
+    <li data-role="list-divider" >
+    	<table>
+          <tr>
+            <td><h1>取餐地點：</h1></td>
+            <td><h1>管理學院</h1></td>
+          </tr>
+    	</table>   	
+    </li>
+    <li>
+      <table>
+      <tr>
+        <td width='100'>餐點名稱</td>
+        <td width='80'>餐點價格</td>
+        <td width='80'>餐點數量</td>
+      </tr>
+      <tr>
+        <td>蜜汁雞腿飯</td>
+        <td align='center'>60</td>
+        <td align='center'>4</td>
+      </tr>
+      <tr>
+        <td>蜜汁排骨飯</td>
+        <td align='center'>60</td>
+        <td align='center'>6</td>
+      </tr>
+      <tr>
+        <td>紅燒排骨飯</td>
+        <td align='center'>60</td>
+        <td align='center'>5</td>
+      </tr>
+     </table>
+    </li>
+    <li data-role="list-divider" data-theme="b"><h1>訂單B</h1></li>
+    <li data-role="list-divider" >
+    	<table>
+          <tr>
+            <td><h1>取餐地點：</h1></td>
+            <td><h1>行政大樓</h1></td>
+          </tr>
+    	</table>   	
+    </li>
+    <li>
+      <table>
+       <tr>
+        <td width='100'>餐點名稱</td>
+        <td width='80'>餐點價格</td>
+        <td width='80'>餐點數量</td>
+      </tr>
+      <tr>
+        <td>蜜汁雞腿飯</td>
+        <td align='center'>60</td>
+        <td align='center'>4</td>
+      </tr>
+      <tr>
+        <td>蜜汁排骨飯</td>
+        <td align='center'>60</td>
+        <td align='center'>8</td>
+      </tr>
+      <tr>
+        <td>紅燒排骨飯</td>
+        <td align='center'>60</td>
+        <td align='center'>5</td>
+      </tr>
+     </table>
+    </li>
+    <li data-role="list-divider" data-theme="b"><h1>訂單C</h1></li>
+    <li data-role="list-divider" >
+    	<table>
+          <tr>
+            <td><h1>取餐地點：</h1></td>
+            <td><h1>人文學院</h1></td>
+          </tr>
+    	</table>   	
+    </li>
+    <li>
+      <table>
+      <tr>
+        <td width='100'>餐點名稱</td>
+        <td width='80'>餐點價格</td>
+        <td width='80'>餐點數量</td>
+      </tr>
+      <tr>
+        <td>蜜汁雞腿飯</td>
+        <td align='center'>60</td>
+        <td align='center'>4</td>
+      </tr>
+      <tr>
+        <td>蜜汁排骨飯</td>
+        <td align='center'>60</td>
+        <td align='center'>5</td>
+      </tr>
+      <tr>
+        <td>紅燒排骨飯</td>
+        <td align='center'>60</td>
+        <td align='center'>3</td>
+      </tr>
+     </table>
+    </li>
+ </ul> 
+
+</div>
+	<div data-role="footer">
+		
+	</div>
+</div>
+
+<!--歷史訂單-->
+<div data-role="page" id="history_order">
+
+ <div data-role="header">
+   <a href="#indexpage" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
+   <h1>歷史訂單</h1>
+ </div>
+
+<div role="main" class="ui-content">
+ <table>
+ 	<tr> 
+ 	 <td>
+ 	 	<select name="search_year" value="2015">
+           <option value="2015">2015</option>
+ 	   </select>
+ 	 </td> 
+ 	 <td>
+ 	 	年
+ 	 </td>
+ 	  <td>
+        <select name="search_month" value="11" >
+           <option value="1">01</option>
+           <option value="2">02</option>
+           <option value="3">03</option>
+           <option value="4">04</option>
+           <option value="5">05</option>
+           <option value="6">06</option>
+           <option value="7">07</option>
+           <option value="8">08</option>
+           <option value="9">09</option>
+           <option value="10">10</option>
+           <option value="11">11</option>
+           <option value="12">12</option>
+ 	   </select>
+ 	  </td> 
+ 	   <td>
+         月
+ 	   </td>	   
+ 	  <td> 
+ 	   <button type="submit" class="ui-corner-all">提交</button>
+ 	 </td>	
+    </tr>		
+ </table>
+<ul data-role="listview" data-inset="true">
+    <li data-role="list-divider" ><h1>2015/11/17</h1></li>
+    <li>
+     <table>
+      <tr>
+        <td width='100'>餐點名稱</td>
+        <td width='80'>餐點價格</td>
+        <td width='80'>餐點數量</td>
+      </tr>
+      <tr>
+        <td>蜜汁雞腿飯</td>
+        <td align='center'>60</td>
+        <td align='center'>9</td>
+      </tr>
+      <tr>
+        <td>蜜汁排骨飯</td>
+        <td align='center'>60</td>
+        <td align='center'>9</td>
+      </tr>
+      <tr>
+        <td>紅燒排骨飯</td>
+        <td align='center'>60</td>
+        <td align='center'>12</td>
+      </tr>
+     </table>
+    </li>
+    <li data-role="list-divider" ><h1>2015/11/18</h1></li>
+    <li>
+      <table>
+      <tr>
+        <td width='100'>餐點名稱</td>
+        <td width='80'>餐點價格</td>
+        <td width='80'>餐點數量</td>
+      </tr>
+      <tr>
+        <td>蜜汁雞腿飯</td>
+        <td align='center'>60</td>
+        <td align='center'>12</td>
+      </tr>
+      <tr>
+        <td>蜜汁排骨飯</td>
+        <td align='center'>60</td>
+        <td align='center'>8</td>
+      </tr>
+      <tr>
+        <td>紅燒排骨飯</td>
+        <td align='center'>60</td>
+        <td align='center'>13</td>
+      </tr>
+     </table>
+    </li>
+ </ul> 
+</div>
+	<div data-role="footer">
+		
+	</div>
+</div>
+</body>
+</html>
