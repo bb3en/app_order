@@ -1,118 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no"  />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<link rel="stylesheet" href="plugin/jquery.mobile-1.4.5.min.css">
-<link rel="stylesheet" href="plugin/jqm-docs.css">
-<link rel="stylesheet" href="plugin/style.css">
-
-<script src="plugin/jquery-1.11.3.min.js"></script>
-<script src="plugin/jquery.mobile-1.4.5.min.js"></script>
-
-
-<script>
-
-
-function clickCounter() {
-    if(typeof(Storage) !== "undefined") {
-        if (localStorage.whataboutnow) {
-            localStorage.whataboutnow = "會員登出";
-        } else {
-            localStorage.whataboutnow = "會員登錄";
-        }
-        document.getElementById("result").innerHTML =  localStorage.whataboutnow;
-    } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-    }
-}
-
-$(document).ready(function () {
-var d = new Date();
-localStorage.whataboutnow = "會員登錄";
-document.getElementById("nowtime").innerHTML =  "目前時間  ： " + d;
-document.getElementById("result").innerHTML =  localStorage.whataboutnow;
-
-
-});
-</script>
-
-<script type ="text/javascript">
- //宣告一個日期的變數，並取得現在日期。
- var d = new Date();
- //將現在日期顯示在頁面上
- document.write("目前時間為："+d);
- 
-</script>
-
+	<title>專題</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/[version]/jquery.mobile-[version].min.css" />
+	<script src="http://code.jquery.com/jquery-[version].min.js"></script>
+	<script src="http://code.jquery.com/mobile/[version]/jquery.mobile-[version].min.js"></script>
+	<link href="css/themes/1/conf-room1.min.css" rel="stylesheet" />
+    <link href="css/themes/1/jquery.mobile.icons.min.css" rel="stylesheet" />
+    <link href="../../lib/jqm/1.4.4/jquery.mobile.structure-1.4.4.min.css" rel="stylesheet" />
 </head>
 <body>
-
-
-	  
-<div data-role="page" id="home">
-
-<div data-role="popup" id="login">
-      <div data-role="header">
-	  <p> <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-left" data-rel="back">Go Back</a></p>
-         <div id="result"><h2>會員登錄</h2></div>
-      </div>
-
-      <div data-role="main" class="ui-content">
-	  
-	
- 帳號：<input type="text" name=""></input>
- 密碼：<input type="password" name=""></input>
-<p><a href="#homelogin" class="ui-btn ui-corner-all ui-shadow " data-transition="pop">登入</a></p>
-
-
-		
-      </div>
-
-      <div data-role="footer">
-        <h2>國立故宮博物館</h2>
-      </div>
+<div data-role="page" id="today_order">
+<div data-role="header">
 </div>
-	  
-  <div data-role="header" class="tophaed">
-    <h1>KUAS燕巢訂餐系統-首頁</h1>
 
-	    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left" data-transition="pop">Home</a>
-         <a href="#login" id="result" data-rel="popup" data-position-to="window" data-transition="fade" >會員登錄</a>
+<div role="main" class="ui-content">
+	<form method="post" action="#">
+      <label for="txt-acc">學號</label>
+      <input type="text" name="txt-acc" id="acc" >     
+      <label for="txt-pwd">密碼</label>
+      <input type="password" name="txt-pwd"id="pwd" autocomplete="off">
+      <fieldset data-role="controlgroup">
+         <input type="checkbox" name="chck-rememberme" id="chck-rememberme" checked="">
+         <label for="chck-rememberme">Remember me</label>
+      </fieldset>     
+      <button type="submit" class="ui-corner-all" class="ui-btn-b">登入</button>
+	</form>
+</div>
 
-  </div>
-
-  <div data-role="main" class="ui-content">
- 
-
-<div class="newtable"> 
-
-<a >最新消息</a>
-<p></p>
-        <div id="nowtime"></div>
-		已付款人數：<div id="ispay"></div>
-		現金餘額  ：<div id="cash"></div>
-				<div>
-		 <a href="#page_1" class="ui-btn ui-corner-all ui-shadow " data-transition="pop">我要訂餐</a>
-			</div>
-				<div>
-		 <a href="#page_2" class="ui-btn ui-corner-all ui-shadow " data-transition="pop">訂單查詢</a>
-		 		 </div>
-				 <div>
-		 <a href="#page_3" class="ui-btn ui-corner-all ui-shadow " data-transition="pop">歷史紀錄</a>
-		 		 </div>
-	  </div >   
-   
-	</div>
-  <div data-role="footer" data-position="fixed">
-    <h2>訂餐系統</h2>
-  </div>
-</div> 
-
-
-
-
-
+</div>
+	
 </body>
 </html>
