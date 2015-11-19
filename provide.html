@@ -10,61 +10,69 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/[version]/jquery.mobile-[version].min.css" />
 	<script src="http://code.jquery.com/jquery-[version].min.js"></script>
 	<script src="http://code.jquery.com/mobile/[version]/jquery.mobile-[version].min.js"></script>
+<script>
+Date.prototype.Format = function (fmt) { //author: meizz 
+    var o = {
+        "M+": this.getMonth() + 1, //月份 
+        "d+": this.getDate(), //日 
+        "h+": this.getHours(), //小时 
+        "m+": this.getMinutes(), //分 
+        "s+": this.getSeconds(), //秒 
+        "q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+        "S": this.getMilliseconds() //毫秒 
+    };
+    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    for (var k in o)
+    if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+    return fmt;
+}
+
+$(document).ready(function () {
+var d = new Date().Format("yyyy-MM-dd hh:mm");
+localStorage.whataboutnow = "會員登錄";
+document.getElementById("nowtime").innerHTML =  d;
+
+});
+
+function loadtime() {
+    var d2 = new Date().Format("yyyy-MM-dd");
+    document.getElementById("nowtime2").innerHTML =  d2;
+    var d3 = new Date().Format("yyyy-MM-dd");
+    document.getElementById("nowtime3").innerHTML =  d3;
+}
+</script>
+
 </head>
 <body>
 <div data-role="page" id="indexpage">
 
  <div data-role="header">
-   <h1>廠商訂單</h1>
- </div>
-
-<div role="main" class="ui-content">
-  <div class="ui-grid-solo">
-    <div class="ui-block-a"><a href="#today_order" class="ui-btn ui-shadow ui-corner-all">今日訂單</a></div>
-  </div>
-  <div class="ui-grid-solo">
-    <div class="ui-block-a"><a href="#history_order" class="ui-btn ui-shadow ui-corner-all">歷史訂單</a></div>
-  </div>
-</div>
-	<div data-role="footer">
-		
-	</div>
-</div>
-
-<!--今日訂單-->
-<div data-role="page" id="today_order">
-
- <div data-role="header">
-   <a href="#indexpage" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
    <h1>今日訂單</h1>
- </div>
-
+ </div>   
 <div role="main" class="ui-content">
-
-<table>
-   <tr>
-    <td>日期：</td>
-    <td>2015/11/18</td>
-   </tr>
+  <table>
     <tr>
-    <td>訂單狀態：</td>
-    <td>未核取</td>
-   </tr>
+      <td>今日日期：</td>
+      <td><div id="nowtime"></div></td>
+    </tr>
     <tr>
-    <td>訂單總額：</td>
-    <td>2640元</td>
-   </tr>
-</table>
-<button  class="ui-corner-all" onclick=""  data-inline="true" >核單</button>	
- <ul data-role="listview" data-inset="true">
+      <td>餐點份數：</td>
+      <td>45份</td>
+    </tr>
+    <tr>
+      <td>訂單總額：</td>
+      <td>2700元</td>
+    </tr>
+  </table>
+  <ul data-role="listview" data-inset="true">
     <li data-role="list-divider" data-theme="b"><h1>訂單A</h1></li>
     <li data-role="list-divider" >
-    	<table>
+      <table>
           <tr>
             <td><h1>取餐地點：</h1></td>
             <td><h1>管理學院</h1></td>
           </tr>
-    	</table>   	
+      </table>    
     </li>
     <li>
       <table>
@@ -92,12 +100,12 @@
     </li>
     <li data-role="list-divider" data-theme="b"><h1>訂單B</h1></li>
     <li data-role="list-divider" >
-    	<table>
+      <table>
           <tr>
             <td><h1>取餐地點：</h1></td>
             <td><h1>行政大樓</h1></td>
           </tr>
-    	</table>   	
+      </table>    
     </li>
     <li>
       <table>
@@ -119,18 +127,18 @@
       <tr>
         <td>紅燒排骨飯</td>
         <td align='center'>60</td>
-        <td align='center'>5</td>
+        <td align='center'>6</td>
       </tr>
      </table>
     </li>
     <li data-role="list-divider" data-theme="b"><h1>訂單C</h1></li>
     <li data-role="list-divider" >
-    	<table>
+      <table>
           <tr>
             <td><h1>取餐地點：</h1></td>
             <td><h1>人文學院</h1></td>
           </tr>
-    	</table>   	
+      </table>    
     </li>
     <li>
       <table>
@@ -157,11 +165,14 @@
      </table>
     </li>
  </ul> 
-
 </div>
-	<div data-role="footer">
-		
-	</div>
+  <div data-role="footer" data-position="fixed" role="contentinfo" class="ui-footer ui-bar-inherit ui-footer-fixed slideup">
+    <div data-role="navbar" data-iconpos="top" class="ui-navbar" role="navigation">
+      <ul class="ui-grid-solo">
+        <li class="ui-block-a"><a href="#history_order" data-transition="slide" data-icon="star" class="ui-link ui-btn ui-icon-star ui-btn-icon-top">歷史訂單</a></li>
+      </ul> 
+    </div>
+ </div>
 </div>
 
 <!--歷史訂單-->
