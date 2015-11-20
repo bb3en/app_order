@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/[version]/jquery.mobile-[version].min.css" />
 	<script src="http://code.jquery.com/jquery-[version].min.js"></script>
 	<script src="http://code.jquery.com/mobile/[version]/jquery.mobile-[version].min.js"></script>
-
+  <script src="click.js"></script>
   <script>
 
 Date.prototype.Format = function (fmt) { //author: meizz 
@@ -41,6 +41,8 @@ function loadtime() {
     document.getElementById("nowtime2").innerHTML =  d2;
     var d3 = new Date().Format("yyyy-MM-dd");
     document.getElementById("nowtime3").innerHTML =  d3;
+    var d4 = new Date().Format("yyyy-MM-dd");
+    document.getElementById("nowtime4").innerHTML =  d4;
 }
 </script>
 </head>
@@ -49,7 +51,7 @@ function loadtime() {
 <div data-role="page" id="indexpage">
 
  <div data-role="header">
-   <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left">登出</a>
+   <a href="#" class="ui-btn ui-btn-right ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left">登出</a>
    <h1>訂餐app</h1>
  </div>
 
@@ -61,10 +63,13 @@ function loadtime() {
      </tr>
      <tr>
       <td>點數餘額：</td>
-      <td><div id=""></div></td>
+      <td>200</td>
      </tr>
    </table>
-
+  
+  <div class="ui-grid-solo">
+    <div class="ui-block-a"><a href="#chose_list" class="ui-btn ui-shadow ui-corner-all">今天吃什麼 </a></div>
+  </div>
   <div class="ui-grid-solo">
     <div class="ui-block-a"><a href="#order_page" class="ui-btn ui-shadow ui-corner-all">我要訂餐</a></div>
   </div>
@@ -75,16 +80,76 @@ function loadtime() {
     <div class="ui-block-a"><a href="#history_order" class="ui-btn ui-shadow ui-corner-all">歷史訂單</a></div>
   </div>
 </div>
-	<div data-role="footer">
-		
-	</div>
+</div>
+
+<!--候選清單-->
+<div data-role="page" id="chose_list">
+
+ <div data-role="header">
+   <a href="#" data-rel="back" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Back</a>
+   <a href="#vote" class="ui-btn ui-corner-all ui-shadow ui-icon-check ui-btn-icon-left">投票</a>
+   <h1>候選清單</h1>
+ </div>
+<div role="main" class="ui-content">
+<ul data-role="listview" data-filter="true" data-split-icon="plus" data-inset="true">
+<li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-a ui-li-has-count ui-first-child">便當類</li>
+      <li>泰師傅便當店<span class="ui-li-count ui-body-inherit" id="span1">15</span></li>
+      <li>廣八便當店<span class="ui-li-count ui-body-inherit">11</span></li>
+      <li>德祥港式燒臘<span class="ui-li-count ui-body-inherit">6</span></li>
+<li data-role="list-divider"role="heading" class="ui-li-divider ui-bar-a ui-li-has-count ui-first-child">麵食類</li>
+      <li>牛二娘麵館<span class="ui-li-count ui-body-inherit">2</span></li>
+      <li>好媽媽麵館<span class="ui-li-count ui-body-inherit">6</span></li>
+      <li>大社涼麵<span class="ui-li-count ui-body-inherit">7</span></li>
+<li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-a ui-li-has-count ui-first-child">速食類</li>
+      <li>麥當勞<span class="ui-li-count ui-body-inherit">0</span></li>
+      <li>肯德基<span class="ui-li-count ui-body-inherit">11</span></li>
+      <li>丹丹漢堡<span class="ui-li-count ui-body-inherit">4</span></li>
+</ul>
+</div>
+</div>
+
+<!--投票-->
+<div data-role="page" id="vote">
+  <div data-role="header">
+    <h1>餐點投票</h1>
+  </div>
+<div role="main" class="ui-content">
+
+<form> 
+  <fieldset data-role="controlgroup">
+   <legend>店家清單：</legend>
+   <input type="radio" name="class1" value="choice-1" id="radio_1">
+   <label for="radio_1">泰師傅便當店</label>
+   <input type="radio" name="class1" value="choice-2" id="radio_2">
+   <label for="radio_2">廣八便當店</label>
+   <input type="radio" name="class1" value="choice-3" id="radio_3">
+   <label for="radio_3">德祥港式燒臘</label>
+   <input type="radio" name="class1" value="choice-4" id="radio_4">
+   <label for="radio_4">牛二娘麵館</label>
+   <input type="radio" name="class1" value="choice-5" id="radio_5">
+   <label for="radio_5">好媽媽麵館</label>
+   <input type="radio" name="class1" value="choice-6" id="radio_6">
+   <label for="radio_6">大社涼麵</label>
+   <input type="radio" name="class1" value="choice-7" id="radio_7">
+   <label for="radio_7">麥當勞</label>
+   <input type="radio" name="class1" value="choice-8" id="radio_8">
+   <label for="radio_8">肯德基</label>
+   <input type="radio" name="class1" value="choice-9" id="radio_9">
+   <label for="radio_9">丹丹漢堡</label>
+  </fieldset>
+  <button class="ui-corner-all" onclick="javascript:location.href='customer.html'" >送出</button>
+</form> 
+  
+
+
+</div>
 </div>
 
 <!--我要訂餐-->
 <div data-role="page" id="order_page">
 
  <div data-role="header">
-   <a href="#indexpage" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
+<a href="#" data-rel="back" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Back</a>
    <h1>我要訂餐</h1>
  </div>
 
@@ -99,9 +164,7 @@ function loadtime() {
   	</div>	
     <div class="ui-block-a">
       <select id="grid-select-1" name="provide1" value="menu1_0" data-shadow="false">
-         <option value="provide_0">無</option>
-         <option value="provide_1">廣八便當店</option>
-         <option value="provide_2">廣三拉麵店</option>
+         <option value="provide_1">泰師傅便當店</option>
       </select>
     </div>
     <div class="ui-block-a">
@@ -110,10 +173,10 @@ function loadtime() {
   	<div class="ui-block-a">
       <select id="grid-select-1" name="menusession_1" value="menu1_0" data-shadow="false">
           <option value="menu1_0">無</option>
-          <option value="menu1_1">雞腿便當</option>
-          <option value="menu1_2">豬排便當</option>
-          <option value="menu1_3">排骨便當</option>
-          <option value="menu1_4">雞排便當</option>
+          <option value="menu1_1">雞腿便當65元</option>
+          <option value="menu1_2">豬排便當55元</option>
+          <option value="menu1_3">排骨便當50元</option>
+          <option value="menu1_4">雞排便當60元</option>
       </select>
     </div>
     <div class="ui-block-a">
@@ -122,8 +185,7 @@ function loadtime() {
     <div class="ui-block-a">
       <select id="grid-select-1" name="provide1" value="menu1_0" data-shadow="false">
          <option value="provide_0">無</option>
-         <option value="provide_1">廣八便當店</option>
-         <option value="provide_2">廣三拉麵店</option>
+         <option value="provide_1">泰師傅便當店</option>
       </select>
     </div>
     <div class="ui-block-a">
@@ -132,10 +194,10 @@ function loadtime() {
   	<div class="ui-block-a">
       <select id="grid-select-1" name="menusession_1" value="menu1_0" data-shadow="false">
           <option value="menu1_0">無</option>
-          <option value="menu1_1">雞腿便當</option>
-          <option value="menu1_2">豬排便當</option>
-          <option value="menu1_3">排骨便當</option>
-          <option value="menu1_4">雞排便當</option>
+          <option value="menu1_1">雞腿便當65元</option>
+          <option value="menu1_2">豬排便當55元</option>
+          <option value="menu1_3">排骨便當50元</option>
+          <option value="menu1_4">雞排便當60元</option>
       </select>
     </div>
     <div class="ui-block-a">
@@ -149,7 +211,7 @@ function loadtime() {
       </select>
     </div>
     <div class="ui-block-a">
-    	<button type="submit" class="ui-corner-all">送出</button>
+    	<button  class="ui-corner-all" onclick="javascript:location.href='customer.html'">送出</button>
     </div>
     </form>	
 </div>
@@ -162,16 +224,18 @@ function loadtime() {
 <div data-role="page" id="today_order">
 
  <div data-role="header">
-   <a href="#indexpage" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
+<a href="#" data-rel="back" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Back</a>
    <h1>今日訂單</h1>
  </div>
 
 <div role="main" class="ui-content">
-
+<script type="text/javascript">
+   loadtime();
+</script>
 <table>
    <tr>
     <td>日期：</td>
-    <td>2015/11/18</td>
+    <td><div id="nowtime4"></div></td>
    </tr>
     <tr>
     <td>訂單狀態：</td>
@@ -179,7 +243,7 @@ function loadtime() {
    </tr>
     <tr>
     <td>訂單總額：</td>
-    <td>120元</td>
+    <td>130元</td>
    </tr>
 </table>	
  <ul data-role="listview" data-inset="true">
@@ -188,15 +252,15 @@ function loadtime() {
       <table>
       <tr>
         <td>店家名稱：</td>
-        <td>廣一便當店</td>
+        <td>泰師傅便當店</td>
       </tr>
       <tr>
         <td>餐點名稱：</td>
-        <td>蜜汁雞腿飯</td>
+        <td>雞腿便當</td>
       </tr>
       <tr>
         <td>餐點價格：</td>
-        <td>60元</td>
+        <td>65元</td>
       </tr>
       <tr>
         <td>餐點數量：</td>
@@ -209,15 +273,15 @@ function loadtime() {
       <table>
       <tr>
         <td>店家名稱：</td>
-        <td>廣一便當店</td>
+        <td>泰師傅便當店</td>
       </tr>
       <tr>
         <td>餐點名稱：</td>
-        <td>蜜汁雞腿飯</td>
+        <td>雞腿便當</td>
       </tr>
       <tr>
         <td>餐點價格：</td>
-        <td>60元</td>
+        <td>65元</td>
       </tr>
       <tr>
         <td>餐點數量：</td>
@@ -237,7 +301,7 @@ function loadtime() {
 <div data-role="page" id="history_order">
 
  <div data-role="header">
-   <a href="#indexpage" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
+<a href="#" data-rel="back" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Back</a>
    <h1>歷史訂單</h1>
  </div>
 
