@@ -30,7 +30,7 @@ Date.prototype.Format = function (fmt) { //author: meizz
 }
 
 $(document).ready(function () {
-var d = new Date().Format("yyyy-MM-dd hh:mm");
+var d = new Date().Format("yyyy-MM-dd");
 localStorage.whataboutnow = "會員登錄";
 document.getElementById("nowtime").innerHTML =  d;
 
@@ -79,6 +79,9 @@ function loadtime() {
   <div class="ui-grid-solo">
     <div class="ui-block-a"><a href="#history_order" class="ui-btn ui-shadow ui-corner-all">歷史訂單</a></div>
   </div>
+  <div class="ui-grid-solo">
+    <div class="ui-block-a"><a href="#conplain" class="ui-btn ui-shadow ui-corner-all">意見回饋</a></div>
+  </div>
 </div>
 </div>
 
@@ -111,6 +114,7 @@ function loadtime() {
 <!--投票-->
 <div data-role="page" id="vote">
   <div data-role="header">
+    <a href="#" data-rel="back" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Back</a>
     <h1>餐點投票</h1>
   </div>
 <div role="main" class="ui-content">
@@ -163,7 +167,7 @@ function loadtime() {
   		<label>選擇店家A</label>
   	</div>	
     <div class="ui-block-a">
-      <select id="grid-select-1" name="provide1" value="menu1_0" data-shadow="false">
+      <select id="grid-select-1" name="provide1" value="provide_1" data-shadow="false">
          <option value="provide_1">泰師傅便當店</option>
       </select>
     </div>
@@ -183,7 +187,7 @@ function loadtime() {
   		<label>選擇店家B</label>
   	</div>	
     <div class="ui-block-a">
-      <select id="grid-select-1" name="provide1" value="menu1_0" data-shadow="false">
+      <select id="grid-select-1" name="provide1" value="provide_1" data-shadow="false">
          <option value="provide_0">無</option>
          <option value="provide_1">泰師傅便當店</option>
       </select>
@@ -309,15 +313,15 @@ function loadtime() {
  <table>
  	<tr> 
  	 <td>
- 	 	<select name="search_year" value="2015">
-           <option value="2015">2015</option>
+ 	 	<select name="search_year" value="2015" data-mini="true">
+           <option value="2015" selected="selected">2015</option>
  	   </select>
  	 </td> 
  	 <td>
  	 	年
  	 </td>
  	  <td>
-        <select name="search_month" value="11" >
+        <select name="search_month" value="11" data-mini="true">
            <option value="1">01</option>
            <option value="2">02</option>
            <option value="3">03</option>
@@ -328,7 +332,7 @@ function loadtime() {
            <option value="8">08</option>
            <option value="9">09</option>
            <option value="10">10</option>
-           <option value="11">11</option>
+           <option value="11" selected="selected">11</option>
            <option value="12">12</option>
  	   </select>
  	  </td> 
@@ -336,7 +340,7 @@ function loadtime() {
          月
  	   </td>	   
  	  <td> 
- 	   <button type="submit" class="ui-corner-all">提交</button>
+ 	   <button type="submit" class="ui-corner-all" data-mini="true">提交</button>
  	 </td>	
     </tr>		
  </table>
@@ -346,15 +350,15 @@ function loadtime() {
       <table>
       <tr>
         <td>店家名稱：</td>
-        <td>廣一便當店</td>
+        <td>泰師傅便當店</td>
       </tr>
       <tr>
         <td>餐點名稱：</td>
-        <td>蜜汁雞腿飯</td>
+        <td>雞腿便當</td>
       </tr>
       <tr>
         <td>餐點價格：</td>
-        <td>60元</td>
+        <td>65元</td>
       </tr>
       <tr>
         <td>餐點數量：</td>
@@ -367,15 +371,15 @@ function loadtime() {
       <table>
       <tr>
         <td>店家名稱：</td>
-        <td>廣一便當店</td>
+        <td>泰師傅便當店</td>
       </tr>
       <tr>
         <td>餐點名稱：</td>
-        <td>蜜汁雞腿飯</td>
+        <td>雞腿便當</td>
       </tr>
       <tr>
         <td>餐點價格：</td>
-        <td>60元</td>
+        <td>65元</td>
       </tr>
       <tr>
         <td>餐點數量：</td>
@@ -385,9 +389,39 @@ function loadtime() {
     </li>
  </ul> 
 </div>
-	<div data-role="footer">
-		
-	</div>
+</div>
+
+<!--意見回饋-->
+<div data-role="page" id="conplain">
+<div data-role="header">
+<a href="#" data-rel="back" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Back</a>
+   <h1>意見回饋</h1>
+ </div>
+ <div role="main" class="ui-content">
+  <form>   
+      <select value="provide_1" data-shadow="false">
+        <option>選擇店家</option>
+        <optgroup label="便當類">
+          <option value="provide_1">泰師傅便當店</option>
+          <option value="provide_2">廣八便當店</option>
+          <option value="provide_3">德祥港式燒臘</option>
+        </optgroup>
+        <optgroup label="麵食類">
+          <option value="provide_4">牛二娘麵館</option>
+          <option value="provide_5">好媽媽麵館</option>
+          <option value="provide_6">大社涼麵</option>
+        </optgroup> 
+        <optgroup label="速食類">
+          <option value="provide_7">麥當勞</option>
+          <option value="provide_8">肯德基</option>
+          <option value="provide_9">丹丹漢堡</option>
+        </optgroup>         
+      </select>
+    <label for="textarea">回饋區</label>
+    <textarea id="textarea" ></textarea>  
+      <button class="ui-corner-all" onclick="javascript:location.href='customer.html'" >送出</button>
+  </form>
+ </div>
 </div>
 </body>
 </html>
